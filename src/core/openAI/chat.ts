@@ -29,7 +29,11 @@ export type IOpenAIStreamChatResponse<T> = T extends EnvEnum.node
 
 class OpenAIChat {
   private chatApiUrl = "https://api.openai.com/v1/chat/completions";
-  constructor() {}
+  constructor(baseUrl?: string) {
+    if(baseUrl){
+      this.chatApiUrl = baseUrl
+    }
+  }
 
   /**
    * 常规返回的 chat

@@ -1,4 +1,4 @@
-# llm-request
+# llm-request-forward
 
 一个面向大语言模型的 web 和 nodejs 端请求库，目前已支持 openAI 的音频和 chat 相关请求，已提供如下 API。
 | 方法名 | 作用 |
@@ -20,7 +20,8 @@ const FormData = require("form-data");
 const LLMRequest = require("llm-request").default;
 
 const audioTest = async () => {
-  const LLMRequestEntity = new LLMRequest(""); // 换成你的API_KEY
+  const LLMRequestEntity = new LLMRequest("", baseUrl); // 换成你的API_KEY
+  // baseUrl 转发地址
   console.log("开始生成音频");
   const audioBuffer = await LLMRequestEntity.openAIAudio(
     {
@@ -55,7 +56,8 @@ audioTest();
 const LLMRequest = require("llm-request").default;
 
 const chatTest = async () => {
-  const LLMRequestEntity = new LLMRequest(""); // 换成你的API_KEY
+  const LLMRequestEntity = new LLMRequest("", baseUrl); // 换成你的API_KEY
+  // baseUrl 转发地址
   console.log("开始测试openAIChat - 常规");
   const chatRes = await LLMRequestEntity.openAIChat({
     model: "gpt-3.5-turbo",
@@ -100,7 +102,8 @@ function App() {
   const [audioText, setAudioText] = useState("");
 
   const audioTest = async () => {
-    const LLMRequestEntity = new LLMRequest(""); // 换成你的API_KEY
+    const LLMRequestEntity = new LLMRequest("", baseUrl); // 换成你的API_KEY
+    // baseUrl 转发地址
     console.log("开始生成音频");
 
     const audioUrl = await LLMRequestEntity.openAIAudio(
@@ -152,7 +155,7 @@ function App() {
   const [text, setText] = useState("");
 
   const chatTest = async () => {
-    const LLMRequestEntity = new LLMRequest(""); // 换成你的API_KEY
+    const LLMRequestEntity = new LLMRequest("", baseUrl); // 换成你的API_KEY baseUrl 转发地址
     setText(
       JSON.stringify(
         await LLMRequestEntity.openAIChat({

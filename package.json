@@ -1,5 +1,5 @@
 {
-  "name": "llm-request",
+  "name": "llm-request-forward",
   "version": "1.0.0",
   "description": "面向大语言模型的web和nodejs端请求库",
   "main": "dist/cjs/index.js",

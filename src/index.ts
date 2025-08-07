@@ -53,10 +53,10 @@ class LLMRequest extends BaseRequest {
    * @param data
    * @returns
    */
-  public async openAIChat(data: IOpenAIChatProps) {
+  public async openAIChat(data: IOpenAIChatProps, baseUrl?: string) {
     const { stream = false } = data;
     const api_key = super.getApiKey();
-    const openAIChatEntity = new OpenAIChat();
+    const openAIChatEntity = new OpenAIChat(baseUrl);
 
     if (stream) {
       return await openAIChatEntity.streamChat(data, api_key, super.getEnv());
