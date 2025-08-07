@@ -68,7 +68,7 @@ describe("OpenAIAudio", () => {
       expect(result).toEqual(mockBufferRes);
       expect(axios.request).toHaveBeenCalledWith(
         expect.objectContaining({
-          url: "https://api.openai.com/v1/audio/speech",
+          url: "https://api.chatanywhere.tech/v1/audio/speech",
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -117,7 +117,7 @@ describe("OpenAIAudio", () => {
       expect(result).toEqual(expectedResult.text);
       expect(axios.request).toHaveBeenCalledWith(
         expect.objectContaining({
-          url: "https://api.openai.com/v1/audio/translations",
+          url: "https://api.chatanywhere.tech/v1/audio/translations",
           method: "POST",
           headers: {
             Authorization: `Bearer ${MOCK_API_KEY}`,
@@ -146,7 +146,7 @@ describe("OpenAIAudio", () => {
       expect(result).toEqual(expectedResult.text);
       expect(axios.request).toHaveBeenCalledWith(
         expect.objectContaining({
-          url: "https://api.openai.com/v1/audio/translations",
+          url: "https://api.chatanywhere.tech/v1/audio/translations",
           method: "POST",
           headers: {
             Authorization: `Bearer ${MOCK_API_KEY}`,

@@ -1,6 +1,6 @@
 {
   "name": "llm-request-forward",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "面向大语言模型的web和nodejs端请求库",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/czm1290433700/llm-request.git"
+    "url": "git@github.com:wangyong315/llm-request-forward.git"
   },
-  "author": "chenzhenmin",
+  "author": "nobody",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/czm1290433700/llm-request/issues"
+    "url": "https://github.com/wangyong315/llm-request-forward/issues"
   },
-  "homepage": "https://github.com/czm1290433700/llm-request#readme",
+  "homepage": "https://github.com/wangyong315/llm-request-forward#readme",
   "dependencies": {
     "axios": "^1.6.8",
     "form-data": "^4.0.0",

@@ -28,11 +28,8 @@ export type IOpenAIStreamChatResponse<T> = T extends EnvEnum.node
   : undefined;
 
 class OpenAIChat {
-  private chatApiUrl = "https://api.openai.com/v1/chat/completions";
-  constructor(baseUrl?: string) {
-    if(baseUrl){
-      this.chatApiUrl = baseUrl
-    }
+  private chatApiUrl = "https://api.chatanywhere.tech/v1/chat/completions";
+  constructor() {
   }
 
   /**

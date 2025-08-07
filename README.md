@@ -20,8 +20,7 @@ const FormData = require("form-data");
 const LLMRequest = require("llm-request").default;
 
 const audioTest = async () => {
-  const LLMRequestEntity = new LLMRequest("", baseUrl); // 换成你的API_KEY
-  // baseUrl 转发地址
+  const LLMRequestEntity = new LLMRequest(""); // 换成你的API_KEY
   console.log("开始生成音频");
   const audioBuffer = await LLMRequestEntity.openAIAudio(
     {
@@ -56,8 +55,7 @@ audioTest();
 const LLMRequest = require("llm-request").default;
 
 const chatTest = async () => {
-  const LLMRequestEntity = new LLMRequest("", baseUrl); // 换成你的API_KEY
-  // baseUrl 转发地址
+  const LLMRequestEntity = new LLMRequest(""); // 换成你的API_KEY
   console.log("开始测试openAIChat - 常规");
   const chatRes = await LLMRequestEntity.openAIChat({
     model: "gpt-3.5-turbo",
@@ -102,8 +100,7 @@ function App() {
   const [audioText, setAudioText] = useState("");
 
   const audioTest = async () => {
-    const LLMRequestEntity = new LLMRequest("", baseUrl); // 换成你的API_KEY
-    // baseUrl 转发地址
+    const LLMRequestEntity = new LLMRequest(""); // 换成你的API_KEY
     console.log("开始生成音频");
 
     const audioUrl = await LLMRequestEntity.openAIAudio(
@@ -155,7 +152,7 @@ function App() {
   const [text, setText] = useState("");
 
   const chatTest = async () => {
-    const LLMRequestEntity = new LLMRequest("", baseUrl); // 换成你的API_KEY baseUrl 转发地址
+    const LLMRequestEntity = new LLMRequest(""); // 换成你的API_KEY
     setText(
       JSON.stringify(
         await LLMRequestEntity.openAIChat({

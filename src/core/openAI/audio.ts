@@ -28,8 +28,8 @@ export type IOpenAISpeechResponse<T> = T extends EnvEnum.node
   : undefined;
 
 class OpenAIAudio {
-  private speechApiUrl = "https://api.openai.com/v1/audio/speech";
-  private transitionUrl = "https://api.openai.com/v1/audio/translations";
+  private speechApiUrl = "https://api.chatanywhere.tech/v1/audio/speech";
+  private transitionUrl = "https://api.chatanywhere.tech/v1/audio/translations";
 
   constructor() {}
 
